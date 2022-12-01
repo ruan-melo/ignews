@@ -19,7 +19,7 @@ type Post = {
   
 
 export default function Posts({posts}: PostsProps){
-    console.log('Posts', posts)
+    
     return(
         <>
             <Head>
@@ -52,8 +52,6 @@ export const getStaticProps: GetStaticProps = async () => {
         fetch: ['publication.title', 'publication.content'],
         pageSize: 100,
     })
-    
-    
 
     const posts = response.results.map((post: any) => {
         return {

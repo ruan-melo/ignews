@@ -11,8 +11,6 @@ interface SubscribeButtonProps{
 export function SubscribeButton({priceId}: SubscribeButtonProps){
     const {data} = useSession();
     const router = useRouter();
-
-    console.log('SUB DATA', data)
     
     async function handleSubscribe(){
         if(!data){
